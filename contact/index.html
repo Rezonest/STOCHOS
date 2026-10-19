@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Stochos Engineering &amp; Projects</title>
+  <meta name="description" content="Send Stochos your drawing, specification or equipment requirement for review." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="../" aria-label="Stochos Engineering &amp; Projects Limited, home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text"><strong>STOCHOS</strong><span>ENGINEERING &amp; PROJECTS LIMITED</span></span>
+      </a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
+      <label class="menu" for="nav-toggle" aria-hidden="true">Menu</label>
+      <nav class="links" id="site-links" aria-label="Main">
+        <a href="../">Home</a>
+        <a href="../about/">About</a>
+        <a href="../capabilities/">Capabilities</a>
+        <a href="../network/">Network</a>
+        <a href="../contact/" class="on" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap page-head contact-page-head">
+      <div class="eyebrow">Contact</div>
+      <h1>Let us discuss your requirement</h1>
+      <p class="lead">Whether you need a specific spare, an engineered equipment package or support for a larger project, send us the details.</p>
+    </div>
+
+    <section class="contact-section">
+      <div class="wrap contact-layout">
+        <div class="contact-form-panel">
+          <div class="contact-panel-heading">
+            <div class="eyebrow">Project enquiry</div>
+            <h2>Tell us about the work.</h2>
+            <p>Share the key requirements and we will review the scope.</p>
+          </div>
+
+          <!-- Enquiries are delivered by FormSubmit (https://formsubmit.co).
+               Replace your-email@example.com with the address that should receive them.
+               The first submission sends a one-time activation email to that address. -->
+          <form action="https://formsubmit.co/your-email@example.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New project enquiry from the Stochos website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="row">
+              <div>
+                <label for="enquiry-name">Name *</label>
+                <input id="enquiry-name" name="name" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="enquiry-company">Company</label>
+                <input id="enquiry-company" name="company" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="enquiry-email">Email *</label>
+                <input id="enquiry-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div>
+                <label for="enquiry-phone">Phone or WhatsApp</label>
+                <input id="enquiry-phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="enquiry-country">Country</label>
+                <input id="enquiry-country" name="country" autocomplete="country-name" />
+              </div>
+              <div>
+                <label for="enquiry-industry">Industry</label>
+                <select id="enquiry-industry" name="industry">
+                  <option value="">Select</option>
+                  <option>Power and energy</option>
+                  <option>Mining and minerals</option>
+                  <option>Oil and gas</option>
+                  <option>Chemicals and process</option>
+                  <option>Cement and building materials</option>
+                  <option>Steel and metals</option>
+                  <option>Sugar and agro processing</option>
+                  <option>Water and utilities</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="enquiry-requirement">Requirement *</label>
+              <textarea id="enquiry-requirement" name="requirement" rows="5" required placeholder="Describe the equipment, spare or project you need."></textarea>
+            </div>
+            <div>
+              <label for="enquiry-attachment">Drawing or specification</label>
+              <input id="enquiry-attachment" name="attachment" type="file" accept=".pdf,.dwg,.dxf,.xls,.xlsx,.doc,.docx,.jpg,.jpeg,.png" />
+            </div>
+            <p class="note">We will review your requirement and reply by email to discuss next steps.</p>
+            <div>
+              <button type="submit" class="btn">Send Your Enquiry <span aria-hidden="true">↗</span></button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact-aside">
+          <img src="../images/sector-water.webp" alt="Water treatment infrastructure" />
+          <div class="contact-aside-copy">
+            <div class="eyebrow">Help us get started</div>
+            <h2>Useful information to include</h2>
+            <ul>
+              <li>Equipment type and operating conditions</li>
+              <li>Technical specification or applicable code</li>
+              <li>Required quantity and project schedule</li>
+              <li>Site location and delivery requirements</li>
+            </ul>
+            <p>Drawings, data sheets and bills of quantities can be attached to the form or shared once we reply.</p>
+            <div class="contact-details">
+              <span>Ghana · West Africa</span>
+              <!-- Add published contact details before launch, e.g.:
+              <a href="mailto:info@example.com">info@example.com</a>
+              <a href="tel:+233000000000">+233 00 000 0000</a>
+              -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-main">
+      <div class="footer-brand">
+        <strong>STOCHOS</strong>
+        <span>ENGINEERING &amp; PROJECTS LIMITED</span>
+        <p>Industrial engineering and project support for Ghana and West Africa.</p>
+      </div>
+      <div class="footer-navigation">
+        <h2>Explore</h2>
+        <nav aria-label="Footer">
+          <a href="../">Home</a>
+          <a href="../about/">About</a>
+          <a href="../capabilities/">Capabilities</a>
+          <a href="../network/">Network</a>
+          <a href="../contact/">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-map">
+        <h2>Ghana · West Africa</h2>
+        <iframe title="Map showing Ghana in West Africa" src="https://www.openstreetmap.org/export/embed.html?bbox=-3.3%2C4.5%2C1.3%2C11.2&amp;layer=mapnik" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="https://www.openstreetmap.org/#map=6/7.95/-0.99" target="_blank" rel="noreferrer">View Ghana map</a>
+      </div>
+      <div class="footer-contact">
+        <h2>Start a conversation</h2>
+        <p>Have a drawing, specification or equipment requirement? Our team can help review the scope.</p>
+        <a href="../contact/">Contact our team <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      Stochos Engineering &amp; Projects Limited is an independent company working in collaboration with Tenaro Global EPC Private Limited and Dehu Group companies. These are separate legal entities. Manufacturing, fabrication and certain engineering services described on this website are carried out by these companies, which hold their own certifications.
+    </div>
+    <div class="footer-base">
+      <div class="wrap">
+        <span>© 2026 Stochos Engineering &amp; Projects Limited</span>
+        <span>Ghana · West Africa</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,52 +1,35 @@
-# Gold Coast Engineering & Projects Ltd.
+# Stochos Engineering & Projects Limited
 
-Company website for Gold Coast Engineering & Projects Ltd., serving industrial and infrastructure projects in Ghana and the wider West African region. Built with React and Vite.
+Company website for Stochos Engineering & Projects Limited, serving industrial and infrastructure projects in Ghana and the wider West African region, in collaboration with Tenaro Global EPC and the Dehu Group.
 
-## Requirements
-
-- Node.js 20.19+ or 22.12+
-- npm
+The site is plain HTML and CSS, with no JavaScript and no build step. The mobile menu is CSS-only, and the contact form is delivered by [FormSubmit](https://formsubmit.co).
 
 ## Run locally
 
-Install the locked dependencies and start the Vite development server:
+Pages use clean folder URLs (`/about/`, `/capabilities/`, …), so serve the folder with any static web server rather than opening the files directly:
 
-```powershell
-npm.cmd ci
-npm.cmd run dev
+```sh
+python3 -m http.server 8000
 ```
 
-Open the local URL printed by Vite, usually `http://localhost:5173/`.
-
-In PowerShell environments where script execution blocks `npm.ps1`, use `npm.cmd` as shown above. In other terminals, `npm` works as usual.
-
-## Available commands
-
-```powershell
-npm.cmd run dev      # Start the development server
-npm.cmd run build    # Create a production build in dist/
-npm.cmd run preview  # Preview the production build
-npm.cmd run lint     # Run Oxlint
-```
+Then visit `http://localhost:8000/`.
 
 ## Project layout
 
 ```text
-App.jsx                 Shared app shell and page navigation
-main.jsx                React application entry point
-pages/                  Home, About, Capabilities, Network, and Contact pages
-components/             Shared header, footer, contact form, and section CTA
-data/siteData.js        Page content, navigation, contact details, and form endpoint
-data/siteImages.js      Local image path constants
-public/images/          Logo and locally stored website photographs
-styles/styles.css       Global and responsive site styles
+index.html                Home
+about/index.html          About, approach and group credentials
+capabilities/index.html   Capabilities, standards and industries
+network/index.html        Tenaro / Dehu ecosystem and global network
+contact/index.html        Enquiry form
+css/styles.css            Global and responsive site styles
+images/                   Website photographs and partner logos
 ```
 
-Add or replace website images in `public/images/` and update their paths in `data/siteImages.js`. The site logo is `public/images/logo.jpeg`.
+The header and footer are repeated in each HTML page, so edit all five pages when changing navigation or footer content. Links between pages are relative (`../about/`), so the site also works when hosted in a sub-folder.
 
 ## Configuration notes
 
-- Update `CONTACT` in `data/siteData.js` with the published office address, email, and phone number before launch.
-- The Contact form prepares an email draft while `SHEETS_URL` is empty. Set `SHEETS_URL` to a configured form endpoint to enable online submission.
-- The footer map is an OpenStreetMap regional map centered on Ghana; it does not identify an office address.
-- The site photographs are stored locally. The map tiles and Google Fonts still load from external services and require an internet connection.
+- In `contact/index.html`, replace `your-email@example.com` in the form's `action` with the address that should receive enquiries. FormSubmit sends a one-time activation email to that address on the first submission; confirm it and later enquiries arrive as emails, including any attached file.
+- Update the copyright year in the footer of each page when it changes.
+- Add the published email and phone number in the `contact-details` block of `contact/index.html` before launch.
