@@ -208,8 +208,6 @@ footer h2 { margin-bottom: 15px; color: #fff; font-family: 'DM Sans', sans-serif
 .capability-detail-number { display: block; margin-bottom: 8px; color: var(--accent-deep); font-size: 11px; font-weight: 700; }
 .capability-detail h3 { margin-bottom: 8px; }
 .capability-detail p { color: var(--muted); font-size: 13px; }
-.standards { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
-.standards span { padding: 6px 11px; border: 1px solid #cdd5df; background: #fff; color: var(--navy); font-size: 12px; font-weight: 600; }
 .industries-directory { background: #e9eef5; }
 .industries-directory-layout { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 64px; }
 .industries-directory-layout h2 { margin-bottom: 16px; }
@@ -314,9 +312,9 @@ a:focus-visible, button:focus-visible, .menu:focus-visible { outline: 2px solid 
 .approach-step, .industry-list > div { transition: padding-left .25s ease, background .25s; }
 .approach-step:hover { padding-left: 10px; }
 .industry-list > div:hover { padding-left: 18px; background: rgba(255,255,255,.5); }
-.tags span, .standards span, .locations span { transition: background .2s, border-color .2s, color .2s, transform .2s; }
+.tags span, .locations span { transition: background .2s, border-color .2s, color .2s, transform .2s; }
 .tags span:hover { border-color: var(--accent-light); background: rgba(169,198,242,.12); color: #fff; transform: translateY(-2px); }
-.standards span:hover, .locations span:not(.here):hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.locations span:not(.here):hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
 input, select, textarea { transition: border-color .2s, box-shadow .2s; }
 input:hover, select:hover, textarea:hover { border-color: #9fb0c4; }
@@ -400,8 +398,6 @@ label { transition: color .2s; }
 	.capability-detail:hover .capability-detail-number { padding: 3px 9px; background: var(--accent); color: #fff; transform: none; letter-spacing: .08em; }
 	.capability-catalog-intro h2 { transition: color .3s; }
 	.capability-catalog-intro:hover h2 { color: var(--accent); }
-	.standards span { cursor: default; }
-	.standards span:hover { border-color: var(--navy); background: var(--navy); color: #fff; transform: translateY(-3px); box-shadow: 0 8px 18px rgba(11,33,64,.18); }
 
 	/* Network: country chips fill blue and show a pin dot */
 	.locations span { position: relative; cursor: default; transition: background .25s, border-color .25s, color .25s, transform .25s, box-shadow .25s, padding .25s; }
@@ -420,7 +416,7 @@ label { transition: color .2s; }
 @supports (animation-timeline: view()) {
 	.section-heading, section .eyebrow, section h2, .approach-copy > .note,
 	.capability-card, .approach-image, .approach-step, .tags span, .card, .band-inner,
-	.credential, .capability-detail, .standards span, .industry-list > div,
+	.credential, .capability-detail, .industry-list > div,
 	.network-image, .eco-card, .locations span, .about-image-pair, .about-story-copy > p,
 	.about-principle, .contact-form-panel, .contact-aside, .footer-main > div {
 		animation: reveal linear both;
@@ -564,7 +560,7 @@ label { transition: color .2s; }
 /* Touch screens: no sticky hover lifts; give a pressed state instead */
 @media (hover: none) {
 	.capability-card:hover, .card:hover, .eco-card:hover, .capability-detail:hover,
-	.tags span:hover, .standards span:hover, .locations span:hover, .footer-navigation a:hover { transform: none; box-shadow: none; }
+	.tags span:hover, .locations span:hover, .footer-navigation a:hover { transform: none; box-shadow: none; }
 	.capability-card:hover .capability-image-wrap img, .capability-detail:hover > img,
 	.approach-image:hover img, .network-image:hover img, .about-image-main:hover img, .contact-aside:hover > img { transform: none; }
 	.approach-step:hover { padding-left: 0; }
