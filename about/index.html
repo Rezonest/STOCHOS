@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Stochos Engineering &amp; Projects</title>
   <meta name="description" content="Stochos is a Ghana based partner for industrial engineering, connected to Tenaro Global EPC and the Dehu Group." />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <symbol id="stochos-mark" viewBox="440 230 368 464">
+      <polygon fill="currentColor" points="450,375 798,240 798,340 557,412 557,514 450,486" />
+      <polygon fill="currentColor" points="584,420 798,470 798,582 684,617 684,506 584,486" />
+      <polygon fill="currentColor" points="450,595 660,518 660,615 450,684" />
+    </symbol>
+  </svg>
   <a class="skip" href="#main">Skip to content</a>
 
   <header>
     <div class="wrap nav">
       <a class="brand" href="../" aria-label="Stochos Engineering &amp; Projects Limited, home">
-        <span class="brand-mark" aria-hidden="true">S</span>
+        <svg class="brand-mark" viewBox="0 0 368 464" aria-hidden="true" focusable="false"><use href="#stochos-mark" /></svg>
         <span class="brand-text"><strong>STOCHOS</strong><span>ENGINEERING &amp; PROJECTS LIMITED</span></span>
       </a>
       <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle menu" />
@@ -103,8 +111,10 @@
   <footer>
     <div class="wrap footer-main">
       <div class="footer-brand">
-        <strong>STOCHOS</strong>
-        <span>ENGINEERING &amp; PROJECTS LIMITED</span>
+        <a class="brand brand-light" href="../" aria-label="Stochos Engineering &amp; Projects Limited, home">
+          <svg class="brand-mark" viewBox="0 0 368 464" aria-hidden="true" focusable="false"><use href="#stochos-mark" /></svg>
+          <span class="brand-text"><strong>STOCHOS</strong><span>ENGINEERING &amp; PROJECTS LIMITED</span></span>
+        </a>
         <p>Industrial engineering and project support for Ghana and West Africa.</p>
       </div>
       <div class="footer-navigation">

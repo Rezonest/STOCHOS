@@ -26,6 +26,8 @@ css/styles.css            Global and responsive site styles
 images/                   Website photographs and partner logos
 ```
 
+The Stochos logo is built into each page: the "S" mark is an inline SVG (`#stochos-mark`) and the name is set as text, so it stays sharp at any size and switches to a light version in the footer. `images/Stochoslogo.jpeg` is the original logo file and `images/favicon.svg` is the browser tab icon. The brand colours come from the logo: blue `#043577` and charcoal `#313131`.
+
 The header and footer are repeated in each HTML page, so edit all five pages when changing navigation or footer content. Links between pages are relative (`../about/`), so the site also works when hosted in a sub-folder.
 
 ## Configuration notes
