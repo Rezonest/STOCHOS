@@ -166,6 +166,7 @@ footer h2 { margin-bottom: 15px; color: #fff; font-family: 'DM Sans', sans-serif
 .footer-navigation a:hover { color: var(--accent-light); }
 .footer-contact a { display: flex; align-items: center; gap: 10px; width: fit-content; margin-top: 18px; color: var(--accent-light); font-size: 13px; font-weight: 700; text-decoration: none; }
 .footer-contact a:hover { text-decoration: underline; }
+.footer-contact a[href^="mailto:"] + a[href^="mailto:"] { margin-top: 8px; }
 .footer-map h2 { margin-bottom: 12px; }
 .footer-map iframe { display: block; width: 100%; height: 170px; border: 0; background: #e4e9e7; }
 .footer-map > a { display: inline-block; margin-top: 9px; color: var(--accent-light); font-size: 12px; text-decoration: none; }
