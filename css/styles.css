@@ -46,6 +46,24 @@ header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.98
 .links a:hover::after { transform: scaleX(1); transform-origin: left; }
 .links a:hover { color: var(--navy); }
 .links a.on { color: var(--navy); border-color: var(--accent); }
+.nav-drop { position: relative; display: flex; align-items: center; gap: 7px; }
+.nav-drop::after { width: 0; height: 0; border: 4px solid transparent; border-top-color: #42525d; border-bottom-width: 0; content: ''; transition: transform .2s; }
+.nav-drop:hover::after, .nav-drop:focus-within::after { transform: rotate(180deg); }
+.nav-sub, .nav-fly { position: absolute; min-width: 240px; padding: 8px 0; border: 1px solid #e9eded; background: #fff; box-shadow: 0 16px 30px rgba(11,33,64,.1); opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+.nav-sub { top: 100%; right: 56px; margin-top: 22px; border-top: 2px solid var(--accent); }
+.nav-sub::before { position: absolute; top: -26px; right: -56px; left: 0; height: 26px; content: ''; }
+.nav-drop:hover .nav-sub, .nav-drop:focus-within .nav-sub { opacity: 1; visibility: visible; transform: none; }
+.nav-sub a { display: block; padding: 10px 18px; border: 0; font-size: 13.5px; white-space: nowrap; transition: background .2s, color .2s; }
+.nav-sub a::after { display: none; }
+.nav-sub a:hover { background: #f3f6f6; color: var(--navy); }
+/* The list sits left of Products so each group's products have room to open on the right */
+.nav-item { position: relative; }
+.nav-item::before { position: absolute; z-index: 1; top: 50%; right: 14px; width: 0; height: 0; border: 4px solid transparent; border-left-color: #8b989f; border-right-width: 0; content: ''; transform: translateY(-50%); pointer-events: none; }
+.nav-item > a { padding-right: 32px; }
+.nav-fly { top: -9px; left: 100%; width: 240px; transform: translateX(-6px); }
+.nav-fly a { white-space: normal; line-height: 1.35; }
+.nav-item:hover > a, .nav-item:focus-within > a { background: #f3f6f6; color: var(--navy); }
+.nav-item:hover > .nav-fly, .nav-item:focus-within > .nav-fly { opacity: 1; visibility: visible; transform: none; }
 .menu { display: none; margin: 0; border: 1px solid var(--line); padding: 9px 14px; background: #fff; color: var(--navy); font-size: 14px; font-weight: 700; cursor: pointer; user-select: none; transition: background .2s, color .2s, border-color .2s, transform .15s; }
 .menu:active { transform: scale(.96); }
 .nav-toggle { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
@@ -275,6 +293,7 @@ footer h2 { margin-bottom: 15px; color: #fff; font-family: 'DM Sans', sans-serif
 .products-banner h1 { max-width: 760px; color: #fff; font-size: 56px; }
 .products-banner p { max-width: 640px; margin-top: 18px; color: #d4dddf; font-size: 17px; }
 .product-group { padding: 80px 0; scroll-margin-top: 88px; }
+.mining-section { scroll-margin-top: 88px; }
 .product-group h2 { margin-bottom: 8px; }
 .product-group-intro { max-width: 720px; color: var(--muted); font-size: 15px; }
 
@@ -508,6 +527,8 @@ label { transition: color .2s; }
 @media (max-width: 900px) {
 	.wrap { padding-right: 24px; padding-left: 24px; }
 	.links { gap: 17px; }
+	.nav-sub { right: 90px; }
+	.nav-sub::before { right: -90px; }
 	.hero { min-height: 610px; }
 	.stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.stat:nth-child(2) { border-right: 1px solid rgba(255,255,255,.12); }
@@ -536,6 +557,14 @@ label { transition: color .2s; }
 	.links a::after { display: none; }
 	.links a:hover { padding-left: 6px; }
 	.links a.on { border-color: #edf0f0; color: var(--accent-deep); }
+	.links { max-height: calc(100vh - 76px); overflow-y: auto; }
+	.nav-drop { display: block; }
+	.nav-drop::after { display: none; }
+	.nav-sub { position: static; min-width: 0; margin: 0; padding: 0; border: 0; box-shadow: none; opacity: 1; visibility: inherit; transform: none; }
+	.nav-sub::before, .nav-item::before, .nav-fly { display: none; }
+	.nav-drop > a { display: block; }
+	.links .nav-sub a { padding: 11px 0 11px 16px; border-bottom: 1px solid #edf0f0; color: #5a6a74; font-size: 13px; }
+	.links .nav-sub a:hover { padding-left: 22px; background: none; }
 	.hero { min-height: 600px; padding: 64px 0 40px; }
 	.hero h1 { font-size: 56px; }
 	.hero .lead { font-size: 16px; }
