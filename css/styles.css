@@ -176,22 +176,23 @@ input[type=file]::file-selector-button { margin-right: 12px; padding: 7px 14px; 
 
 /* Footer */
 footer { padding: 0; background: #081a33; color: #dce4e4; font-size: 14px; }
-.footer-main { display: grid; grid-template-columns: 1.1fr .55fr 1.15fr .9fr; gap: 38px; padding-top: 58px; padding-bottom: 54px; }
-.footer-brand p, .footer-contact p { max-width: 330px; margin-top: 20px; color: #bdc9cc; font-size: 14px; }
-footer h2 { margin-bottom: 15px; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; }
-.footer-navigation nav { display: grid; grid-template-columns: 1fr; gap: 9px; }
+.footer-main { display: grid; grid-template-columns: 1.1fr .55fr 1.15fr .9fr; gap: 32px; padding-top: 36px; padding-bottom: 30px; }
+.footer-brand p, .footer-contact p { max-width: 330px; margin-top: 12px; color: #bdc9cc; font-size: 14px; }
+footer h2 { margin-bottom: 10px; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; }
+.footer-navigation nav { display: grid; grid-template-columns: 1fr; gap: 6px; }
 .footer-navigation a { width: fit-content; color: #dce4e4; font-size: 13px; text-decoration: none; }
 .footer-navigation a:hover { color: var(--accent-light); }
-.footer-contact a { display: flex; align-items: center; gap: 10px; width: fit-content; margin-top: 18px; color: var(--accent-light); font-size: 13px; font-weight: 700; text-decoration: none; }
+.footer-contact a { display: flex; align-items: center; gap: 10px; width: fit-content; margin-top: 12px; color: var(--accent-light); font-size: 13px; font-weight: 700; text-decoration: none; }
 .footer-contact a:hover { text-decoration: underline; }
 .footer-contact a[href^="mailto:"] + a[href^="mailto:"] { margin-top: 8px; }
-.footer-map h2 { margin-bottom: 12px; }
-.footer-map iframe { display: block; width: 100%; height: 170px; border: 0; background: #e4e9e7; }
-.footer-map > a { display: inline-block; margin-top: 9px; color: var(--accent-light); font-size: 12px; text-decoration: none; }
+.footer-map h2 { margin-bottom: 10px; }
+.footer-address { margin-bottom: 10px; color: #dce4e4; font-size: 13px; font-style: normal; line-height: 1.6; }
+.footer-map iframe { display: block; width: 100%; height: 130px; border: 0; background: #e4e9e7; }
+.footer-map > a { display: inline-block; margin-top: 6px; color: var(--accent-light); font-size: 12px; text-decoration: none; }
 .footer-map > a:hover { text-decoration: underline; }
-.footer-legal { padding-bottom: 26px; color: #8fa2a8; font-size: 11.5px; line-height: 1.6; }
+.footer-legal { padding-bottom: 16px; color: #8fa2a8; font-size: 11.5px; line-height: 1.6; }
 .footer-base { border-top: 1px solid rgba(255,255,255,.14); }
-.footer-base .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 16px; padding-bottom: 16px; color: #aebdc1; font-size: 12px; }
+.footer-base .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 12px; padding-bottom: 12px; color: #aebdc1; font-size: 12px; }
 
 /* About */
 .about-story-section { padding-top: 38px; }
@@ -540,7 +541,7 @@ label { transition: color .2s; }
 	.about-story-layout, .network-overview { gap: 36px; }
 	.industries-directory-layout { grid-template-columns: .7fr 1.3fr; gap: 36px; }
 	.ecosystem { grid-template-columns: 1fr; }
-		.footer-main { grid-template-columns: 1fr 1fr; gap: 34px; }
+		.footer-main { grid-template-columns: 1fr 1fr; gap: 26px; }
 	.contact-layout { gap: 26px; }
 	.contact-form-panel { padding: 25px; }
 }
@@ -630,7 +631,7 @@ label { transition: color .2s; }
 	.row { grid-template-columns: 1fr; }
 	.credentials { grid-template-columns: 1fr; }
 	.footer-base .wrap { flex-direction: column; }
-	.footer-main { grid-template-columns: 1fr; gap: 32px; padding-top: 44px; padding-bottom: 40px; }
+	.footer-main { grid-template-columns: 1fr; gap: 24px; padding-top: 30px; padding-bottom: 26px; }
 	.footer-contact, .footer-map { grid-column: auto; }
 	.about-image-pair { min-height: 360px; padding: 0 42px 58px 0; }
 	.about-image-main { height: 315px; }
